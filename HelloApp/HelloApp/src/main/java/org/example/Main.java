@@ -1,25 +1,11 @@
-public class HelloApp {
-
+public class UC7 {
     public static void main(String[] args) {
-
-        String name = "World";
-
-        if (args.length > 0) {
-
-            StringBuilder nameBuilder = new StringBuilder();
-
-
-            for (String arg : args) {
-                nameBuilder.append(arg).append(", ");
-            }
-
-
-            if (nameBuilder.length() > 0) {
-                name = nameBuilder.substring(0, nameBuilder.length() - 2);
-            }
-
+        if (args.length == 0) {
+            System.out.println("Hello, World!");
         }
-
-        System.out.println("Hello, " + name + "!");
+        else {
+            String names = String.join(", ", args);
+            System.out.println("Hello, " + names + "!");
+        }
     }
 }
